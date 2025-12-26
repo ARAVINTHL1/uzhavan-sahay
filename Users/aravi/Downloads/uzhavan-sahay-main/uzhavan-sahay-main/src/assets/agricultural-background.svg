@@ -1,0 +1,131 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <!-- Sun -->
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+    <!-- Cloud -->
+    <radialGradient id="cloudGradient" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#F0F8FF;stop-opacity:0.6" />
+    </radialGradient>
+    <!-- Field -->
+    <linearGradient id="fieldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#90EE90;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)" />
+
+  <!-- Sun -->
+  <circle cx="1600" cy="150" r="80" fill="url(#sunGradient)" />
+
+  <!-- Clouds -->
+  <ellipse cx="300" cy="200" rx="100" ry="60" fill="url(#cloudGradient)" />
+  <ellipse cx="400" cy="180" rx="80" ry="50" fill="url(#cloudGradient)" />
+  <ellipse cx="350" cy="220" rx="90" ry="55" fill="url(#cloudGradient)" />
+
+  <ellipse cx="800" cy="250" rx="120" ry="70" fill="url(#cloudGradient)" />
+  <ellipse cx="900" cy="230" rx="100" ry="60" fill="url(#cloudGradient)" />
+  <ellipse cx="850" cy="270" rx="110" ry="65" fill="url(#cloudGradient)" />
+
+  <!-- Mountains in background -->
+  <polygon points="0,600 200,400 400,500 600,350 800,450 1000,400 1200,500 1400,380 1600,450 1800,420 1920,480 1920,1080 0,1080" fill="#8B4513" opacity="0.3" />
+
+  <!-- Field -->
+  <rect x="0" y="600" width="1920" height="480" fill="url(#fieldGradient)" />
+
+  <!-- Crops (wheat) -->
+  <g stroke="#DEB887" stroke-width="2" fill="none">
+    <!-- Row 1 -->
+    <line x1="50" y1="650" x2="50" y2="750" />
+    <line x1="70" y1="650" x2="70" y2="750" />
+    <line x1="90" y1="650" x2="90" y2="750" />
+    <line x1="110" y1="650" x2="110" y2="750" />
+    <line x1="130" y1="650" x2="130" y2="750" />
+    <!-- Wheat heads -->
+    <path d="M45,640 Q50,630 55,640" />
+    <path d="M65,640 Q70,630 75,640" />
+    <path d="M85,640 Q90,630 95,640" />
+    <path d="M105,640 Q110,630 115,640" />
+    <path d="M125,640 Q130,630 135,640" />
+  </g>
+
+  <!-- More crop rows -->
+  <g stroke="#DEB887" stroke-width="2" fill="none">
+    <line x1="200" y1="650" x2="200" y2="750" />
+    <line x1="220" y1="650" x2="220" y2="750" />
+    <line x1="240" y1="650" x2="240" y2="750" />
+    <line x1="260" y1="650" x2="260" y2="750" />
+    <line x1="280" y1="650" x2="280" y2="750" />
+    <path d="M195,640 Q200,630 205,640" />
+    <path d="M215,640 Q220,630 225,640" />
+    <path d="M235,640 Q240,630 245,640" />
+    <path d="M255,640 Q260,630 265,640" />
+    <path d="M275,640 Q280,630 285,640" />
+  </g>
+
+  <!-- Tractor -->
+  <g transform="translate(1200, 700)">
+    <!-- Body -->
+    <rect x="0" y="0" width="120" height="60" rx="10" fill="#FF6347" />
+    <!-- Wheels -->
+    <circle cx="30" cy="60" r="20" fill="#2F4F4F" />
+    <circle cx="90" cy="60" r="20" fill="#2F4F4F" />
+    <circle cx="30" cy="60" r="10" fill="#696969" />
+    <circle cx="90" cy="60" r="10" fill="#696969" />
+    <!-- Cabin -->
+    <rect x="60" y="-20" width="50" height="40" rx="5" fill="#4682B4" />
+    <!-- Exhaust -->
+    <rect x="5" y="-10" width="5" height="15" fill="#696969" />
+  </g>
+
+  <!-- Irrigation system -->
+  <g stroke="#4169E1" stroke-width="4" fill="none">
+    <line x1="1400" y1="600" x2="1400" y2="750" />
+    <line x1="1350" y1="650" x2="1450" y2="650" />
+    <line x1="1370" y1="670" x2="1430" y2="670" />
+    <line x1="1390" y1="690" x2="1410" y2="690" />
+  </g>
+
+  <!-- Birds -->
+  <g fill="#000000">
+    <path d="M500,300 Q510,290 520,300 Q510,310 500,300" />
+    <path d="M550,320 Q560,310 570,320 Q560,330 550,320" />
+    <path d="M600,280 Q610,270 620,280 Q610,290 600,280" />
+  </g>
+
+  <!-- Farmhouse -->
+  <g transform="translate(150, 650)">
+    <!-- House -->
+    <rect x="0" y="0" width="80" height="60" fill="#8B4513" />
+    <!-- Roof -->
+    <polygon points="0,0 40,-30 80,0" fill="#DC143C" />
+    <!-- Door -->
+    <rect x="30" y="20" width="20" height="40" fill="#654321" />
+    <!-- Window -->
+    <rect x="10" y="10" width="15" height="15" fill="#87CEEB" />
+    <rect x="55" y="10" width="15" height="15" fill="#87CEEB" />
+  </g>
+
+  <!-- Trees -->
+  <g transform="translate(50, 550)">
+    <rect x="10" y="30" width="10" height="50" fill="#8B4513" />
+    <circle cx="15" cy="30" r="20" fill="#228B22" />
+  </g>
+  <g transform="translate(1700, 550)">
+    <rect x="10" y="30" width="10" height="50" fill="#8B4513" />
+    <circle cx="15" cy="30" r="20" fill="#228B22" />
+  </g>
+
+  <!-- Overlay for depth -->
+  <rect width="1920" height="1080" fill="rgba(255,255,255,0.1)" />
+</svg>

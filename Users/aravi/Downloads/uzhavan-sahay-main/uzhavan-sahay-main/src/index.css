@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agricultural Advisory System Design System */
+@layer base {
+  :root {
+    --background: 48 21% 97%;
+    --foreground: 120 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 10% 15%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 12% 95%;
+    --secondary-foreground: 120 10% 15%;
+
+    --muted: 120 12% 95%;
+    --muted-foreground: 120 5% 45%;
+
+    --accent: 142 32% 88%;
+    --accent-foreground: 120 10% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 13% 90%;
+    --input: 120 13% 94%;
+    --ring: 142 76% 36%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 43 96% 56%;
+    --warning-foreground: 25 25% 15%;
+
+    --earth: 28 75% 85%;
+    --earth-dark: 28 45% 65%;
+
+    --agricultural-green: 142 76% 36%;
+    --agricultural-light: 142 32% 88%;
+    --agricultural-dark: 142 76% 25%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--agricultural-dark)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth)), hsl(var(--earth-dark)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--primary)));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(120 12% 98%));
+
+    --shadow-elegant: 0 4px 24px -2px hsl(var(--primary) / 0.12);
+    --shadow-card: 0 2px 12px -2px hsl(var(--primary) / 0.08);
+    --shadow-button: 0 2px 8px -2px hsl(var(--primary) / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .agricultural-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .earth-gradient {
+    background: var(--gradient-earth);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  /* WHITE TRANSPARENT GLASS THEME */
+  /* Clean white frosted glass design */
+
+  .glass-card {
+    background: rgba(0, 20, 10, 0.4) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border-radius: 20px;
+  }
+
+  .glass-card-light {
+    background: rgba(20, 40, 30, 0.4) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 20px;
+  }
+
+  .glass-card-accent {
+    background: rgba(0, 30, 15, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border-radius: 20px;
+  }
+
+  /* Section titles with emerald glow */
+  .section-title-glow {
+    @apply text-2xl font-bold text-white;
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+  }
+
+  /* Accent text colors - emerald green */
+  .text-accent {
+    @apply text-emerald-400;
+  }
+
+  .text-accent-light {
+    @apply text-emerald-300;
+  }
+
+  .text-accent-muted {
+    @apply text-emerald-200/70;
+  }
+
+  /* Icon containers with emerald glow */
+  .icon-container {
+    background: linear-gradient(145deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.12) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  /* Input fields for dark theme */
+  .input-dark {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 10px;
+  }
+
+  .input-dark::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .input-dark:focus {
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  }
+
+  /* Emerald button style */
+  .btn-warm {
+    background: linear-gradient(145deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .btn-warm:hover {
+    background: linear-gradient(145deg, #34d399 0%, #10b981 100%);
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Data highlight boxes */
+  .data-box {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  /* Divider line */
+  .divider-warm {
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+
+  /* Enhanced text clarity on glass backgrounds */
+  .glass-text {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-text-muted {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Glass card with enhanced hover effect */
+  .glass-card-hover {
+    background: rgba(0, 20, 10, 0.35) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-8px);
+    background: rgba(0, 30, 15, 0.5) !important;
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Result/content cards with glass effect */
+  .glass-card-content {
+    background: rgba(0, 30, 15, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 20px;
+  }
+
+  /* More Services grid items with scale hover */
+  .service-card {
+    background: rgba(0, 20, 10, 0.35) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(0, 30, 15, 0.5) !important;
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .service-card:hover .icon-container {
+    transform: scale(1.1);
+  }
+
+  /* Force text visibility in glass cards */
+  .glass-card,
+  .glass-card-hover,
+  .glass-card-content,
+  .service-card,
+  .glass-card-light,
+  .glass-card-accent {
+    color: #ffffff !important;
+  }
+
+  /* Force headers to be white */
+  .glass-card h1,
+  .glass-card h2,
+  .glass-card h3,
+  .glass-card h4,
+  .glass-card h5,
+  .glass-card h6,
+  .glass-card-hover h1,
+  .glass-card-hover h2,
+  .glass-card-hover h3,
+  .glass-card-hover h4,
+  .glass-card-hover h5,
+  .glass-card-hover h6,
+  .glass-card-content h1,
+  .glass-card-content h2,
+  .glass-card-content h3,
+  .glass-card-content h4,
+  .glass-card-content h5,
+  .glass-card-content h6,
+  .service-card h1,
+  .service-card h2,
+  .service-card h3,
+  .service-card h4,
+  .service-card h5,
+  .service-card h6,
+  .glass-card-light h1,
+  .glass-card-light h2,
+  .glass-card-light h3,
+  .glass-card-light h4,
+  .glass-card-light h5,
+  .glass-card-light h6 {
+    color: #ffffff !important;
+  }
+
+  /* Force paragraphs/spans to be light gray */
+  .glass-card p,
+  .glass-card span,
+  .glass-card label,
+  .glass-card div,
+  .glass-card-hover p,
+  .glass-card-hover span,
+  .glass-card-hover label,
+  .glass-card-hover div,
+  .glass-card-content p,
+  .glass-card-content span,
+  .glass-card-content label,
+  .glass-card-content div,
+  .service-card p,
+  .service-card span,
+  .service-card label,
+  .service-card div,
+  .glass-card-light p,
+  .glass-card-light span,
+  .glass-card-light label,
+  .glass-card-light div {
+    color: #e5e5e5;
+  }
+
+  /* Force icons to be visible */
+  .glass-card svg,
+  .glass-card .lucide,
+  .glass-card-hover svg,
+  .glass-card-hover .lucide,
+  .glass-card-content svg,
+  .glass-card-content .lucide,
+  .service-card svg,
+  .service-card .lucide,
+  .glass-card-light svg,
+  .glass-card-light .lucide {
+    color: #4ade80 !important;
+    /* Bright emerald green */
+  }
+
+  /* Allow specific overrides if needed (e.g. checkmarks) */
+  .glass-card .text-white,
+  .glass-card-hover .text-white,
+  .glass-card-content .text-white {
+    color: #ffffff !important;
+  }
+}
